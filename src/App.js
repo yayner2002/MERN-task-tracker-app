@@ -1,5 +1,5 @@
-import './App.css';
-import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom'
+// import './App.css';
+import { Route, Routes } from 'react-router-dom'
 import 'bootstrap/dist/css/bootstrap.min.css'
 import NavBar from './components/NavBar';
 import TaskList from './components/TaskList';
@@ -10,7 +10,7 @@ import CreateUser from './components/CreateUser';
 
 function App() {
   return (
-     <>
+     <div className="container">
      <NavBar />
      <Routes>
       <Route path='/' element={<TaskList />} />
@@ -18,7 +18,7 @@ function App() {
       <Route path='/create' element={<CreateTask />} />
       <Route path='/user' element={<CreateUser />} />
      </Routes> 
-     </>   
+     </div>  
   );
 }
 
