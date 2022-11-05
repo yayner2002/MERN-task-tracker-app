@@ -3,7 +3,7 @@ const cors = require('cors')
 const mongoose = require('mongoose')
 
 const userRoutes = require('./routes/users')
-const exerciseRoutes = require('./routes/exercises')
+const taskRoutes = require('./routes/task')
 
 require('dotenv').config()
 
@@ -22,7 +22,7 @@ connection.once('open', () => {
   console.log("DB connected Successfully")
 })
 
-app.use('/exercises', exerciseRoutes)
+app.use('/tasks', taskRoutes)
 app.use('/users', userRoutes)
 
 app.listen(port, () => {

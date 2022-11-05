@@ -29,7 +29,7 @@ class CreateUser extends Component {
 
     console.log(user);
     const endPoint = `http://localhost:4000/users/create`;
-    
+
     axios.post(endPoint, user)
     .then((res) => console.log(res.data))
     .catch((err) => console.log(err))
@@ -56,7 +56,7 @@ class CreateUser extends Component {
         </div>
 
         <div className="form-group">
-          <input type="submit" value="Create User" className='btn btn-primary' />
+          <input type="submit" value="Create User" className='btn btn-primary mt-2' />
         </div>
       </form>
     </div>
