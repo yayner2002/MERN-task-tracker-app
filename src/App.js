@@ -10,7 +10,7 @@ import CreateUser from './components/CreateUser';
 
 function App() {
   return (
-     <div className="container">
+     <div className="app">
      <NavBar />
      <Routes>
       <Route path='/' element={<TaskList />} />

@@ -8,6 +8,12 @@ class EditTask extends Component {
 
   constructor(props) {
     super(props);
+    console.log(window.location.pathname.split("/")[2])
+    console.log(window.location.pathname)
+    console.log(window.location.pathname.split("/")[1])
+
+
+
 
     this.onchangeUsername = this.onchangeUsername.bind(this);
     this.onchangeDescription = this.onchangeDescription.bind(this);
@@ -25,7 +31,7 @@ class EditTask extends Component {
   }
 
   componentDidMount() {
-    axios.get(`http://localhost:4000/tasks/${this.props.match.params.id}`)
+    axios.get(`http://localhost:4000/tasks/${window.location.pathname.split("/")[2]}`)
     .then((res) => {
       this.setState({
         username: res.data.username,
@@ -82,7 +88,7 @@ class EditTask extends Component {
 
     console.log(task);
 
-    axios.post(`http://localhost:4000/tasks/update/${this.props.match.params.id}`, task)
+    axios.post(`http://localhost:4000/tasks/update/${window.location.pathname.split("/")[2]}`, task)
     .then((res) => console.log(res.data))
     .catch((err) => console.log(err))
 

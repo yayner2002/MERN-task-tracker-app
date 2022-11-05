@@ -6,6 +6,7 @@ import Task from './Task'
 class TaskList extends Component {
   constructor(props) {
     super(props)
+    
 
     this.deleteTask = this.deleteTask.bind(this)
     this.state = {
@@ -45,7 +46,7 @@ class TaskList extends Component {
     return (
     <div>
       <h3>All Tasks</h3>
-      <table className='table table-stripe'>
+      <table className='table table-hover'>
         <thead className='thead-light'>
         <tr>
           <th>Username</th>
