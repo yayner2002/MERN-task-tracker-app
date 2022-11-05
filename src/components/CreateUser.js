@@ -1,4 +1,5 @@
 import React, { Component } from 'react'
+import axios from 'axios'
 
 class CreateUser extends Component {
   constructor(props) {
@@ -27,10 +28,16 @@ class CreateUser extends Component {
     };
 
     console.log(user);
+    const endPoint = `http://localhost:4000/users/create`;
+    
+    axios.post(endPoint, user)
+    .then((res) => console.log(res.data))
+    .catch((err) => console.log(err))
+    
 
 
     this.setState({
-      username:''
+      username: ''
     })
   }
 
