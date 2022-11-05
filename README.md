@@ -11,7 +11,7 @@ a simple web App that does simple task tracking for learning/educational purpose
 
 ## Screenshot
 
-![mockup](/mern-stack-task-tracker/src/assets/images/app-screenshot.png?raw=true "mockup")
+![mockup](/mern-stack-task-tracker/public/app-screenshot.png "mockup")
 ## Live Demo Link
 
 
